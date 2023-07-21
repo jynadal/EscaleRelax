@@ -14,11 +14,10 @@ module.exports = {
             600: "#5658CB"
         },
          secondary: {
-            200:"#eaf8f4",
-            300:"#bfe9de",
-            400:"#56c4a7",
-            DEFAULT: "#2AB691",
-            600: "#26a482"
+            200:"#FFD700",
+            400:"#C99200",
+            DEFAULT: "#D4AF37",
+            600: "#A57C00"
         },
         gray: {
             400:"#EEEEEE",
@@ -28,7 +27,12 @@ module.exports = {
             // 800: "",
             DEFAULT: "#808080",
         },
-        black: "3B3B3B"
+        black: "3B3B3B",
+        goldBg: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        },
     },
     fontSize: {
         "8xl": [
@@ -151,8 +155,10 @@ module.exports = {
                 fontWeight: "400",
             },
         ],
-    }
-  ,
+    },
+    borderRadius: {
+          DEFAULT: '10px',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
