@@ -88,19 +88,19 @@ const footerSocialNetworkLinks: AppLinks[] = [
 
 export const footerLinks = [
     {
-        labels: "App",
+        label: "App",
         links: footerApplicationLinks,    
     },
      {
-        labels: "Utilisateurs",
+        label: "Utilisateurs",
         links: footerUsersLinks,    
     },
       {
-        labels: "Informations",
+        label: "Informations",
         links: footerInformationLinks,    
     },
      {
-        labels: "Réseaux",
+        label: "Réseaux",
         links: footerSocialNetworkLinks,    
     },
 ]
