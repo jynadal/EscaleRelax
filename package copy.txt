@@ -31,3 +31,4 @@
     "tailwindcss": "^3.3.2"
   }
 }
+//    // //&& next export && firebase deploy",
