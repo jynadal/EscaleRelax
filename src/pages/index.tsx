@@ -11,6 +11,7 @@ import { Container } from '@/ui/components/container/container'
 import { Layout } from '@/ui/components/layout/layout'
 import { LandingPageContainer } from '@/ui/modules/landing-page/landing-page.container'
 import { FeaturedView } from '@/ui/modules/landing-page/components/featured/featured.view'
+import { Testimonial } from '@/ui/modules/landing-page/components/testimonial/testimonial.view'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
     <Layout>
      <LandingPageContainer />
      <FeaturedView />
+     <Testimonial />
     </Layout>
 
     
