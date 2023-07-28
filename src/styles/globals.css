@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @import url()
 
 @layer base {
@@ -14,7 +13,6 @@
 a:hover {
     @apply text-secondary-400;
 }
-
 
 .animate, a, a:hover {
     -webkit-transition: all 0.2s ease-in-out;

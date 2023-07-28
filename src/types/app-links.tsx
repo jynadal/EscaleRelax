@@ -8,3 +8,6 @@ export interface FooterLinks {
     label: string;
     links: AppLinks[];
 }
+export interface ServiceLinks {
+
+}
