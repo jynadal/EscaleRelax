@@ -1,4 +1,5 @@
 import { AppLinks } from "@/types/app-links";
+import {RiFacebookFill, RiYoutubeFill,RiGoogleFill} from 'react-icons/ri';
 
 const footerApplicationLinks: AppLinks[] = [
     {
@@ -8,39 +9,44 @@ const footerApplicationLinks: AppLinks[] = [
     },
     {
         label: "A propos",
-        baseUrl: "/#",
+        baseUrl: "/about",
         type:"internal",    
     },
     {
         label: "Services",
-        baseUrl: "/#",
+        baseUrl: "/services",
         type:"internal",    
     },
     {
-        label: "Produits",
-        baseUrl: "/",
-        type:"external",    
+        label: "Packages",
+        baseUrl: "/packages",
+        type:"internal",    
     },
+    // {
+    //     label: "Produits",
+    //     baseUrl: "/shop",
+    //     type:"external",    
+    // },
 ];
 const footerUsersLinks: AppLinks[] = [
     {
-        label: "Accueil",
-        baseUrl: "/",
-        type:"internal",    
-    },
-    {
-        label: "A propos",
+        label: "Mon espace",
         baseUrl: "/#",
         type:"internal",    
     },
     {
-        label: "Services",
-        baseUrl: "/#",
+        label: "Connexion",
+        baseUrl: "/connexion",
         type:"internal",    
     },
     {
-        label: "Produits",
-        baseUrl: "/",
+        label: "Inscription",
+        baseUrl: "/connexion/inscription",
+        type:"internal",    
+    },
+    {
+        label: "Mot de passe oublié",
+        baseUrl: "/connexion/mots-de-passe-perdu",
         type:"external",    
     },
 ];
@@ -68,21 +74,24 @@ const footerInformationLinks: AppLinks[] = [
     },
 ];
 
-const footerSocialNetworkLinks: AppLinks[] = [
+export const footerSocialNetworkLinks: AppLinks[] = [
     {
         label: "Facebook",
         baseUrl: "https://facebook.com",
-        type:"external",    
+        type:"external",
+        icon:RiFacebookFill,    
     },
     {
         label: "Instagram",
         baseUrl: "https://instagram.com",
-        type:"internal",    
+        type:"internal",
+        icon:RiYoutubeFill,    
     },
     {
         label: "Google +",
         baseUrl: "https://google.com",
-        type:"internal",    
+        type:"internal",
+        icon:RiGoogleFill,    
     },
 ];
 

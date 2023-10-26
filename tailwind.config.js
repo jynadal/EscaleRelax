@@ -24,9 +24,9 @@ module.exports = {
             400:"#EEEEEE",
             500:"#F5F5F5",
             600:"#DCDCDC",
-            // 700: "",
-            // 800: "",
-            DEFAULT: "#808080",
+            700: "#808080",
+            800: "#333333",
+            DEFAULT: "#1D1D1D",
         },
         black: "3B3B3B",
         goldBg: {
@@ -34,6 +34,11 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         },
+        alert: {
+            danger: "#FF4E4E",
+            succes: "#90DA1",
+            warning: "#FEB72F",
+        }
     },
     fontSize: {
         "8xl": [

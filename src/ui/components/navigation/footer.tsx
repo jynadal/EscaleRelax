@@ -4,17 +4,16 @@ import Image from "next/image"
 import {footerLinks} from "./app-links"
 import { v4 as uuidv4} from "uuid"
 import { ActiveLink } from "./active-link"
-import { LinkTypes } from "@/lib/link-type"
 import { FooterLinks } from "@/types/app-links"
+import { LinkTypes } from "@/lib/link-type"
+import { SocialNetworksButtons } from "./socials-networks-button"
 
 export const Footer = () => {
-
     const currentYear = new Date().getFullYear();
 
-    const footerNavigationLists = footerLinks.map((columnLinks) => (
-    
+    const footerNavigationLists = footerLinks.map((columnLinks) => ( 
         <FooterLink key={uuidv4()} data={columnLinks} />
-    ))
+    ));
 
     return (
         <div className="bg-gray py-10">
@@ -47,8 +46,7 @@ export const Footer = () => {
                 {/* <div className="">Liste des liens</div> */}
             </Container>
             
-            <hr className="text-white"
-            />
+            <hr className="text-white" />
             <Container className="flex justify-between pt-4">
             <div className="flex flex-row gap-1">
                 <Typography
@@ -68,18 +66,21 @@ export const Footer = () => {
                         {`Copyright &copy; ${currentYear} | Tous droit réserver Escale Relax `}                 
                 </Typography>
             </div>
-              <div className="flex flex-row gap-1">
-                <Typography
+              <div className="">
+                <SocialNetworksButtons theme="gray" />
+                {/*
+                <div className="flex flex-row gap-1">
+                 <Typography
                         variant="caption3"
                         theme="white"
                         weight="regular"
                         >
                         <a href="" target="_blank" className="underline">facebook</a>
                         {` | `}
-                        <a href="" target="_blank" className="underline">instagram</a>
+                        <a href="" target="_blank" className="underline">instaaaa</a>
                         {` | `}
                         <a href="" target="_blank" className="underline">google</a>                
-                </Typography>
+                </Typography> */}
             </div>
             </Container>
         </div>

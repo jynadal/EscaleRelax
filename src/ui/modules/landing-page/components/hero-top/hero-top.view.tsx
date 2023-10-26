@@ -24,16 +24,17 @@ return (
                 <Typography 
                 variant="h1" 
                 component="h1" 
-                className="max-w-center pb-10 ">
+                className="max-w-center text-secondary pb-10 ">
                 Régénérer, Revitaliser</Typography>
                 <Typography 
                 variant="h4" 
                 component="h4" 
-                className=" pb-10">
+                className=" text-gray-700 pb-10">
                 MASSOTHÉRAPIE RÉGÉNÉRATRICE</Typography>
-                 <Button 
-                //baseUrl="#services" 
-                size="small" >Nos Services</Button>
+                <Button 
+                baseUrl="#services" 
+                size="small" >Nos Services
+                </Button>
             </div>
             <div className="z-10 pt-10 ">
                

@@ -17,7 +17,7 @@ export const Navigation = ({}: Props) => {
                     <div className="flex items-center gap-2.5">
                         <Logo size="small" />
                         <div className="flex flex-col">
-                            <div className="text-gray font-extrabold text-[24px]">
+                            <div className="text-secondary font-extrabold text-[24px]">
                             Escale relax
                             </div>
                         <Typography
@@ -41,11 +41,12 @@ export const Navigation = ({}: Props) => {
                         <ActiveLink href="/d-s">Design System</ActiveLink>
                         <Link href="about">A propos</Link>
                         <Link href="services">Services</Link>
-                        <Link href="shop">Boutique</Link>                        
+                        <Link href="packages">Packages</Link>   
+                        {/* <Link href="shop">Boutique</Link>                         */}
                     </Typography>
                     <div className="flex items-center gap-2">
-                        <Button size="small">Connexion</Button>
-                        <Button size="small" variant="secondary">Rejoindre</Button>
+                        <Button baseUrl="/connextion" size="small">Connexion</Button>
+                        <Button baseUrl="/connextion/inscription" size="small" variant="secondary">Rejoindre</Button>
                     </div>
                 </div>
             </Container>

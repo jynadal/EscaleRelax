@@ -1,27 +1,39 @@
 import { IconProps } from "@/types/IconsProps";
 import clsx from "clsx";
 import { Spinner } from "../spinner/spinner";
+import { LinkType, LinkTypes } from "@/lib/link-type";
+import Link from "next/link";
 
 interface Props {
     size?: "small" | "medium" | "large";
     variant?: "accent" | "secondary" | "outline" | "disabled" | "ico";
     icon?: IconProps;
-    iconeTheme?: "accent" | "secondary" | "gray";
+    iconTheme?: "accent" | "secondary" | "gray";
     iconePosition?: "left" | "right";
     disabled?: boolean;
     isLoading?: boolean;
     children?: React.ReactNode;
+    baseUrl?: string;
+    linkType?: LinkType;
+    action?: Function;
+    type?: "button" | "submit";
+    fullWith?: boolean;
 }
 
 export const Button = ({
         size="medium", 
         variant="accent",
         icon,
-        iconeTheme="accent", 
+        iconTheme="accent", 
         iconePosition="right",
         disabled,
         isLoading,
-        children
+        children,
+        baseUrl,
+        linkType = "internal",
+        type="button",
+        fullWith= false,
+        action=()=> {},
     }: Props) => {
 
     let variantStyles: string="", 
@@ -47,14 +59,15 @@ export const Button = ({
             break;
 
         case  "ico":
-                if (iconeTheme === "accent") { //Default
-                    variantStyles = "bg-gray hover:bg-gray-600 text-white rounded";
+                if (iconTheme === "accent") { //Default
+                    variantStyles = "bg-gray hover:bg-gray-600 text-white rounded-full";
                 }
-                if (iconeTheme === "secondary") {
-                    variantStyles = "bg-secondary-400 hover:bg-secondary-400/75 text-white rounded";                
+                if (iconTheme === "secondary") {
+                    variantStyles = "bg-secondary-400 hover:bg-secondary-400/75 text-white rounded-full";                
                 }
-                if (iconeTheme === "gray") {
-                    variantStyles = "bg-white hover:bg-gray-500 border border-gray-500 text-gray-600 rounded";                
+                if (iconTheme === "gray") {
+                    variantStyles = "bg-gray-800 text-white hover:bg-gray-700  rounded-full";
+                    // hover:bg-gray-800 border border-gray-500 text-gray-600 rounded                
                 } 
             break;
     }
@@ -87,39 +100,79 @@ export const Button = ({
             break;
 
     }
-    return (
+
+
+    
+    const buttonContent = (
     <>
-        <button type="button"
+            {isLoading && (
+                 <div className="absolute inset-0 flex items-center justify-center">
+                    {
+                        variant == "accent" || 
+                        (variant === "ico" &&
+                            (iconTheme == "accent" || iconTheme == "gray")) ? (
+                            <Spinner size="small" variant="white" />
+                        ) : (
+                            <Spinner size="small" />
+                        )}
+                </div>
+            )}
+        
+       <div className={clsx(isLoading && "invisible")}>
+                {icon && variant ==="ico" ?  (
+                    <icon.icon size={icoSize}/> 
+                ) : (
+                <div className={clsx(icon && "flex items-center gap-1")}> 
+                    {icon && iconePosition === "left" && (
+                        <icon.icon size={icoSize} />
+                    )}
+                        <>{children}</>
+                    {icon && iconePosition === "right" && (
+                        <icon.icon size={icoSize} />
+                    )}
+                </div>
+            )}
+        </div>
+    </>
+    );
+    
+
+    const handleClick = () => {
+        if (action) {
+            action();
+        }
+    }
+
+    const buttonElement = (
+        <button
+            type={type}
             className={clsx(
                 variantStyles,
                 sizeStyles,
-                icoSize,
-                isLoading && "cursor-wait", 
-                "relative", "animate" ) }
-            onClick={()=>console.log('click')}
-            disabled={disabled}                      
+                isLoading && "cursor-not-allowed",
+                fullWith && "w-full",
+                "relative animate"
+            )}
+            onClick={handleClick}
+            disabled={disabled || isLoading ? true : false } 
             >
-            {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                    {
-                        variant == "accent" || variant === "secondary" || variant === "ico" ? (<Spinner size="small" variant="white" />) : (<Spinner size="small" />)
-                    }
-                </div>
-            )}
-    <div className={clsx(isLoading && "invisible")}>
-            {icon && variant ==="ico" ?  (<icon.icon size={icoSize}/> 
-            ) : (
-            <div className={clsx(icon && "flex items-center gap-1")}> 
-            {icon && iconePosition === "left" && (
-            <icon.icon size={icoSize} />)}
-            {children}
-            {icon && iconePosition === "right" && (
-            <icon.icon size={icoSize} />)}
-            </div>
-            )}
-    </div>
-        
-        </button>
-    </>
+            {buttonContent}
+        </button>    
     );
+    
+
+        if (baseUrl) {
+        // Si liens donc 
+            if (linkType === LinkTypes.EXTERNAL) {
+                return (
+                    <a href={baseUrl} target="_blank">
+                        {buttonElement}
+                    </a>
+                );
+            } else {
+                return <Link href={baseUrl}>{buttonElement}</Link>;
+            } 
+        };
+        
+        return buttonElement;
 };
