@@ -17,50 +17,50 @@ interface cardListInterface {
 const datacards: cardListInterface[] = [
     {
        image:"/assets/images/1.jpeg",
-        time: 45,
-        price:75,
+        // time: 45,
+        // price:75,
         service:"Epilations",
-        link:"/services/épilation"
+        link:"/contact"
     },
      {
        image:"/assets/images/2.webp",
-        time: 45,
-        price:80,
+        // time: 45,
+        // price:80,
         service:"Soins du Visage",
-        link:"/services/soins_visage"
+        link:"/contact"
     },
      {
        image:"/assets/images/3.webp",
-        time: 45,
-        price:75,
+        // time: 45,
+        // price:75,
         service:"Modelage Corps",
-        link:"/services/modelage_corps"
+        link:"/contact"
     },
-        {
-       image:"/assets/images/4.webp",
-        time: 45,
-        price:75,
-        service:"Eskalia",
-        link:"/services/eskalia"
-    },
-     {
-       image:"/assets/images/5.webp",
-        time: 45,
-        price:80,
-        service:"Soins du Corps",
-        link:"/services/soins_corps"
-    },
-     {
-       image:"/assets/images/6.webp",
-        time: 45,
-        price:75,
-        service:"Beauté des mains et des pieds",
-        link:"/services/beaute_mains_pieds"
-    },
+    //     {
+    //    image:"/assets/images/4.webp",
+    //     time: 45,
+    //     price:75,
+    //     service:"Eskalia",
+    //     link:"/services/eskalia"
+    // },
+    //  {
+    //    image:"/assets/images/5.webp",
+    //     time: 45,
+    //     price:80,
+    //     service:"Soins du Corps",
+    //     link:"/services/soins_corps"
+    // },
+    //  {
+    //    image:"/assets/images/6.webp",
+    //     time: 45,
+    //     price:75,
+    //     service:"Beauté des mains et des pieds",
+    //     link:"/services/beaute_mains_pieds"
+    // },
     
 ]
 
-export const CardsService = ({}) => {
+export const ServicesCards = ({}) => {
 
     const cardList = datacards.map((card) => (
       <div key={uuidv4()}  className="rounded-lg bg-gray-100 p-8">
@@ -86,15 +86,10 @@ export const CardsService = ({}) => {
               variant="caption1"
               weight="medium"
               theme="gray"
-               className="mt-5">{card.time} min</Typography>
+               className="mt-5">Lorem ipsum dolor sit amet, {card.service} consectetur adipisicing elit.{card.service}</Typography>
 
 
-            <Typography   component= "h5"
-              variant="lead"
-              weight="regular"
-              theme="gray"
-              className="mt-5"
-              >{card.price} €</Typography>
+            
 
               <div className="mt-6 align-bottom"> 
                 <Button 
@@ -120,7 +115,7 @@ return (
     <Container className="mx-auto max-w-screen-xl px-4 py-16 bg-gray-400 sm:px-6 sm:py-24 lg:px-8" >
     <Typography
     className="text-center text-3xl text-gray-700  font-bold tracking-tight sm:text-5xl"    
-    >Nos autres Services</Typography>
+    >Tous nos Services</Typography>
            <Typography 
                 variant="body-lg"
                 component="p" 

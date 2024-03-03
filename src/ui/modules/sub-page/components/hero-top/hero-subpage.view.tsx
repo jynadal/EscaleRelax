@@ -5,6 +5,8 @@ import Image from "next/image"
 
 export const HeroSubPageView = () => {
 
+
+
 return (
     <Container className="relative bg-red-900 overflow-hidden w-10% h-10% mt-10 pt-40 pb-12">
         
@@ -15,7 +17,7 @@ return (
                 variant="h1" 
                 component="h1" 
                 className="max-w-center pb-10 ">
-                Services</Typography>
+                Services Soin du visage </Typography>
         
             </div>
             <div className="z-10 pt-10 ">

@@ -32,7 +32,7 @@ return (
                 className=" text-gray-700 pb-10">
                 MASSOTHÉRAPIE RÉGÉNÉRATRICE</Typography>
                 <Button 
-                baseUrl="#services" 
+                baseUrl="services" 
                 size="small" >Nos Services
                 </Button>
             </div>

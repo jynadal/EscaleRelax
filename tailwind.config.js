@@ -171,6 +171,16 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+    //   //location animation
+    //   animation: {
+    //   "loop-scroll": "loop-scroll 50s linear infinite",
+    //   },
+    //   keyframes: {
+    //     "loop-scroll": {
+    //         from: { transform: "translate(0)"},
+    //         to: { tranform: "translateX(-100%"},
+    //       },
+    //     },
     },
   },
   plugins: [],

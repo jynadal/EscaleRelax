@@ -2,8 +2,8 @@ import { useState } from "react";
 import { RegisterView } from "./register.view"
 import { SubmitHandler, useForm } from "react-hook-form";
 import { RegisterFormFieldsType } from "@/types/forms";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from '@/config/firebaseConfig';
+//import { createUserWithEmailAndPassword } from "firebase/auth";
+//import { auth } from '@/config/firebase-config';
 import { firebaseCreateUser } from "@/api/authentication";
 
 export const RegisterContainer = () => {
@@ -17,6 +17,7 @@ export const RegisterContainer = () => {
         reset,
     } = useForm<RegisterFormFieldsType>();
 
+
     const handleCreateUserAuthentication = async ({
         email, 
         password, 
@@ -26,7 +27,7 @@ export const RegisterContainer = () => {
         if (error) {
             setIsLoading(false)
             console.log(error)
-            return
+            return;
         }
         console.log(data)
     
@@ -42,26 +43,27 @@ export const RegisterContainer = () => {
         type: "manual",
         message: "Ton mot de passe doit comporter au minimum 6 caractères",
         });
-        return
+        return;
     }
 
-    handleCreateUserAuthentication(formData)
+    // handleCreateUserAuthentication(formData)
 
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed up 
-            const user = userCredential.user;
-            setIsLoading(false);
-            console.log(user)
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            setIsLoading(false);
-            console.log(errorCode,errorMessage)
-            // ..
-        });
+    //   createUserWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         // Signed up 
+    //         const user = userCredential.user;
+    //         setIsLoading(false);
+    //         console.log(user)
+    //         // ...
+    //     })
+    //     .catch((error) => {
+    //         const errorCode = error.code;
+    //         const errorMessage = error.message;
+    //         setIsLoading(false);
+    //         console.log(errorCode,errorMessage)
+    //         // ..
+    //     });
+    
     };
 
     return (

@@ -9,7 +9,7 @@
 }
 
 a:hover {
-    @apply text-secondary-400;
+    @apply text-gray-700;
 }
 
 .animate, a, a:hover {

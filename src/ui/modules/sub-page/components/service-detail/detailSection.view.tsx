@@ -2,13 +2,15 @@ import { Container } from "@/ui/components/container/container"
 import { Button } from "@/ui/design-system/button/button"
 import { Typography } from "@/ui/design-system/typography/typography"
 import Image from "next/image"
+import { LinkProps } from "next/link"
 //import stars from "/assets/images/svg/stars.svg"
 import { v4 as uuidv4} from "uuid"
 
 
 interface cardListInterface {
-   image?:string,
-    service?: string,
+    rank?:number,
+    image?:any,
+    service?: any,
     time?:number,
     price?:number,
     link?:string,
@@ -16,6 +18,7 @@ interface cardListInterface {
 
 const datacards: cardListInterface[] = [
     {
+       rank:1,
        image:"/assets/images/1.jpeg",
         time: 45,
         price:75,
@@ -23,6 +26,7 @@ const datacards: cardListInterface[] = [
         link:""
     },
      {
+       rank:2,
        image:"/assets/images/2.webp",
         time: 45,
         price:80,
@@ -30,6 +34,7 @@ const datacards: cardListInterface[] = [
         link:""
     },
      {
+       rank:3,
        image:"/assets/images/3.webp",
         time: 45,
         price:75,
@@ -37,6 +42,7 @@ const datacards: cardListInterface[] = [
         link:""
     },
         {
+       rank:4,
        image:"/assets/images/4.webp",
         time: 45,
         price:75,
@@ -44,6 +50,7 @@ const datacards: cardListInterface[] = [
         link:""
     },
      {
+       rank:5,
        image:"/assets/images/5.webp",
         time: 45,
         price:80,
@@ -51,6 +58,7 @@ const datacards: cardListInterface[] = [
         link:""
     },
      {
+       rank:6,
        image:"/assets/images/6.webp",
         time: 45,
         price:75,
@@ -70,7 +78,7 @@ export const DetailService = ({}) => {
               <Image src={card.image}
                width={300}
                height={216}
-                        alt={card.service}
+               alt={card.service}
                 />
             
               <div className="flex flex-col item-center text-center gap-0.5 text-goldBg-300">
@@ -164,7 +172,7 @@ return (
 
             {/* <!--   Image Section     --> */}
             <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 my-4">
-                <Image className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" url="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="" />
+                <Image className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/assets/images/6.webp" width='600' height='400' alt="" />
             </div>
             {/* <!--   End of Image Section     --> */}
         </div>
@@ -176,7 +184,7 @@ return (
             <Container className="mx-auto max-w-screen-xl px-4 py-16 bg-gray-400 sm:px-6 sm:py-24 lg:px-8" >
             <Typography
             className="text-center text-3xl text-gray-700  font-bold tracking-tight sm:text-5xl"    
-            >Tous nos Services</Typography>
+            >Tous nos </Typography>
                 {/* <Typography 
                         variant="body-lg"
                         component="p" 

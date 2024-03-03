@@ -16,8 +16,8 @@ export const Footer = () => {
     ));
 
     return (
-        <div className="bg-gray py-10">
-            <Container className="flex justify-between p-8">
+        <Container className="bg-gray py-10">
+            <div className="flex justify-between p-8">
                 <div className="flex flex-col item-center gap-1">
                     <Typography
                         variant="caption1"
@@ -44,10 +44,11 @@ export const Footer = () => {
 
                 <div className="flex gap-7">{footerNavigationLists}</div>
                 {/* <div className="">Liste des liens</div> */}
-            </Container>
+            </div>
             
             <hr className="text-white" />
-            <Container className="flex justify-between pt-4">
+            <Container className="flex flex-row justify-between pt-4">
+            {/* //"flex flex-col justify-between pt-4  lg:flex flex-row " */}
             <div className="flex flex-row gap-1">
                 <Typography
                         variant="caption1"
@@ -62,8 +63,9 @@ export const Footer = () => {
                         variant="caption4"
                         theme="white"
                         weight="regular"
+                        className="hidden lg:block"             
                         >
-                        {`Copyright &copy; ${currentYear} | Tous droit réserver Escale Relax `}                 
+                        {`Copyrights ©  ${currentYear} | Tous droit réserver Escale Relax `}    
                 </Typography>
             </div>
               <div className="">
@@ -83,7 +85,8 @@ export const Footer = () => {
                 </Typography> */}
             </div>
             </Container>
-        </div>
+
+        </Container>
     )
 };
 
@@ -111,15 +114,16 @@ const FooterLink = ({data}: footerLinkProps) => {
     return (
 
         <div className="min-w=[200px]">
+        
             <Typography
                 theme="white"
                 variant="caption2"
                 weight="medium"
-                className="pb-5"
+                className="pb-5 hidden sm:block"
             >
             {data.label}
             </Typography>
-            <Typography theme="white" variant="caption3" className="space-y-4">
+            <Typography theme="white" variant="caption3" className="space-y-4 hidden sm:block">
                 {linkList}
             </Typography>
 

@@ -9,7 +9,7 @@ interface Props {
     variant?: "accent" | "secondary" | "outline" | "disabled" | "ico";
     icon?: IconProps;
     iconTheme?: "accent" | "secondary" | "gray";
-    iconePosition?: "left" | "right";
+    iconPosition?: "left" | "right";
     disabled?: boolean;
     isLoading?: boolean;
     children?: React.ReactNode;
@@ -25,7 +25,7 @@ export const Button = ({
         variant="accent",
         icon,
         iconTheme="accent", 
-        iconePosition="right",
+        iconPosition="right",
         disabled,
         isLoading,
         children,
@@ -123,11 +123,11 @@ export const Button = ({
                     <icon.icon size={icoSize}/> 
                 ) : (
                 <div className={clsx(icon && "flex items-center gap-1")}> 
-                    {icon && iconePosition === "left" && (
+                    {icon && iconPosition === "left" && (
                         <icon.icon size={icoSize} />
                     )}
                         <>{children}</>
-                    {icon && iconePosition === "right" && (
+                    {icon && iconPosition === "right" && (
                         <icon.icon size={icoSize} />
                     )}
                 </div>
