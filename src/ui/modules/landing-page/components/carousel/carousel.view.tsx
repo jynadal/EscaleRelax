@@ -5,6 +5,7 @@ import { useEffect, useState} from "react";
 
 import { servicesImages } from "./servicesData";
 import Description from "./description";
+import { Container } from "@/ui/components/container/container";
 
 
 
@@ -33,7 +34,7 @@ const ServicesCarousel = () => {
   }, [activeImage]);
 
 return (
-<div className="grid place-items-center grid-cols-2 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl ">
+<Container className="grid place-items-center grid-cols-2 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl ">
 
     <div className="w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 rounded-2xl">
         {servicesImages.map((pict, idx) =>(
@@ -59,7 +60,7 @@ return (
         clickNext={clickNext}
         clickPrev={clickPrev}
     />
-</div>
+</Container>
 
 
 );

@@ -27,7 +27,7 @@ export const LocationAnimation = () => {
         <Typography
                 variant="caption3"
                 component="span"
-                className="text-secondary capitalize hover:text-gray-600 animate"
+                className="text-secondary capitalize hover:text-gray-600 animate hidden lg:block"
     >
                 Brie Compte Robert
                 {/* {path !== "accueil" ? ( path.replace(/-/g," ") ) :  <RiHome3Line className="inline -mt-1"/> } */}
@@ -35,7 +35,7 @@ export const LocationAnimation = () => {
         <Typography
                 variant="lead"
                 component="span"
-                className="text-secondary capitalize hover:text-gray-600 animate"
+                className="text-secondary capitalize hover:text-gray-600 animate hidden lg:block"
     >
                 Santeny
                 {/* {path !== "accueil" ? ( path.replace(/-/g," ") ) :  <RiHome3Line className="inline -mt-1"/> } */}
@@ -43,7 +43,7 @@ export const LocationAnimation = () => {
         <Typography
                 variant="body-base"
                 component="span"
-                className="text-secondary capitalize hover:text-gray-600 animate"
+                className="text-secondary capitalize hover:text-gray-600 animate hidden lg:block"
     >
                 Marolle-en-Brie
                 {/* {path !== "accueil" ? ( path.replace(/-/g," ") ) :  <RiHome3Line className="inline -mt-1"/> } */}
@@ -51,7 +51,7 @@ export const LocationAnimation = () => {
             <Typography
                 variant="body-lg"
                 component="span"
-                className="text-gray capitalize hover:text-gray-600 animate"
+                className="text-gray capitalize hover:text-gray-600 animate hidden lg:block"
     >
                 Servon
                 {/* {path !== "accueil" ? ( path.replace(/-/g," ") ) :  <RiHome3Line className="inline -mt-1"/> } */}
@@ -59,35 +59,14 @@ export const LocationAnimation = () => {
            <Typography
                 variant="lead"
                 component="span"
-                className="text-secondary capitalize hover:text-gray-600 animate"
+                className="text-secondary capitalize hover:text-gray-600 animate hidden lg:block"
     >
                 Ferrolle
                 {/* {path !== "accueil" ? ( path.replace(/-/g," ") ) :  <RiHome3Line className="inline -mt-1"/> } */}
         </Typography>
-           <Typography
-                variant="lead"
-                component="span"
-                className="text-secondary capitalize hover:text-gray-600 animate"
-    >
-                Boissy
-                {/* {path !== "accueil" ? ( path.replace(/-/g," ") ) :  <RiHome3Line className="inline -mt-1"/> } */}
-        </Typography>
-           <Typography
-                variant="lead"
-                component="span"
-                className="text-secondary capitalize hover:text-gray-600 animate"
-    >
-                Villecresne
-                {/* {path !== "accueil" ? ( path.replace(/-/g," ") ) :  <RiHome3Line className="inline -mt-1"/> } */}
-        </Typography>
-           <Typography
-                variant="lead"
-                component="span"
-                className="text-secondary capitalize hover:text-gray-600 animate"
-    >
-                Santeny
-                {/* {path !== "accueil" ? ( path.replace(/-/g," ") ) :  <RiHome3Line className="inline -mt-1"/> } */}
-        </Typography>
+       
+       
+  
 
         </Container>
     )

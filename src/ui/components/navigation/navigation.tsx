@@ -89,10 +89,10 @@ export const Navigation = ({}: Props) => {
                             className='flex items-center gap-7
                                         justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'
                             >
-                            <ActiveLink href="/d-s">Design System</ActiveLink>
-                            <ActiveLink href="about">A propos</ActiveLink>
-                            <ActiveLink href="services">Services</ActiveLink>
-                            <ActiveLink href="packages">Packages</ActiveLink>   
+                            <ActiveLink href="/about">A propos</ActiveLink>
+                            <ActiveLink href="/packages">Packages</ActiveLink>   
+                            <ActiveLink href="/services/soins_visage">Prestation</ActiveLink>
+                            <ActiveLink href="/services">Services</ActiveLink>
                             {/* <ActiveLink href="shop">Boutique</ActiveLink>                         */}
                         </Typography>
                         {/* <div className="flex items-center gap-2">
