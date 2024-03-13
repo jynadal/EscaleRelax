@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     colors: {
         white: "#f5f5f5",
+        jadea:"#CDD1BD",
+        whatapp:"25D366",
         primary: {
             200:"#efeffc",
             300:"#cfd0f6",

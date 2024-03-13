@@ -19,7 +19,7 @@ export default function Home() {
     />
     <Container>
     <h1>
-        Page Offline
+        Vous êtes hors ligne
     </h1>
     
     </Container>

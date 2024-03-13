@@ -12,7 +12,7 @@ interface cardListInterface {
     time?:number,
     price?:number,
     link?:string,
-}
+}[]
 
 const datacards: cardListInterface[] = [
     {
@@ -67,10 +67,11 @@ export const CardsService = ({}) => {
             <div className="flex items-center gap-4">
             
              <div>
-              <Image src={card.image}
+              <Image 
+                src={card.image as string || "/assets/images/4.webp"}
                width={300}
                height={216}
-               alt={card.service}
+               alt={card.service || 'photo'}
                 />
             
               <div className="flex flex-col item-center text-center gap-0.5 text-goldBg-300">
@@ -81,20 +82,6 @@ export const CardsService = ({}) => {
               theme="gray"
                className="mt-5">{card.service}</Typography>
 
-            <Typography
-              component= "p"
-              variant="caption1"
-              weight="medium"
-              theme="gray"
-               className="mt-5">{card.time} min</Typography>
-
-
-            <Typography   component= "h5"
-              variant="lead"
-              weight="regular"
-              theme="gray"
-              className="mt-5"
-              >{card.price} €</Typography>
 
               <div className="mt-6 align-bottom"> 
                 <Button 
@@ -104,7 +91,7 @@ export const CardsService = ({}) => {
                 baseUrl={card.link}
                 type="submit"
                 
-                >Réserver</Button>
+                >En savoir +</Button>
                 </div>
               </div>
            

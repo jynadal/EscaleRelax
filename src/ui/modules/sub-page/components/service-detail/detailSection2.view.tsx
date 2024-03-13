@@ -13,7 +13,7 @@ interface cardListInterface {
     time?:number,
     price?:number,
     link?:string,
-}
+}[]
 
 const datacards: cardListInterface[] = [
     {
@@ -67,11 +67,14 @@ export const DetailService2 = ({}) => {
       <div key={uuidv4()}  className="rounded-lg bg-gray-100 p-8">
             <div className="flex items-center gap-4">
             
+
+
              <div>
-              <Image url={card.image}
+              <Image 
+              src={card.image as string  || '/assets/images/2.webp'}
                width={300}
                height={216}
-                        alt={card.service}
+                        alt={card.service as string}
                 />
             
               <div className="flex flex-col item-center text-center gap-0.5 text-goldBg-300">

@@ -72,6 +72,39 @@ export const HightlightListView = () => {
                 </div>
         </div>
     </div>
+
+      <div className="flex justify-center gap-24">
+        <div className="w-[520px] h-[350px] relative mt-10 bg-gray-400" >
+        <Image fill src={"/assets/images/3.webp"} alt=""
+        />
+        </div>
+        <div className="max-w-md space-y-7">
+            <Typography  
+                    variant="h3"
+                    component="h2">
+                    Epilations à domicile
+                </Typography>
+                <div className="space-y-3">
+                    <ListPoint>Lonsectetur adipisicing</ListPoint>
+                    <ListPoint>Ex harum ipsam</ListPoint>
+                    <ListPoint>Ipsumorem ipsum</ListPoint>
+                    <ListPoint>Dolor sit amet </ListPoint>
+                </div>
+
+                <Typography  
+                    variant="body-lg"
+                    component="p">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex harum ipsam atque maxime, at enim!
+                </Typography>
+
+                <div className="relative">
+                    <Button baseUrl="/contact" icon={{icon:RiArrowRightLine }}
+                    iconPosition="right">
+                    Réservez                
+                    </Button>
+                </div>
+        </div>
+    </div>
     
     </Container>
     

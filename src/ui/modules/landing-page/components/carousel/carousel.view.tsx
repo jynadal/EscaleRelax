@@ -8,7 +8,6 @@ import Description from "./description";
 import { Container } from "@/ui/components/container/container";
 
 
-
 const ServicesCarousel = () => {
 
   const [activeImage, setActiveImage] = useState(0);
@@ -31,11 +30,12 @@ const ServicesCarousel = () => {
     return () => {
       clearTimeout(timer);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeImage]);
 
 return (
-<Container className="grid place-items-center grid-cols-2 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl ">
 
+<Container className="grid place-items-center grid-cols-2 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl ">
     <div className="w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 rounded-2xl">
         {servicesImages.map((pict, idx) =>(
             <div key={idx} className={`${
@@ -45,7 +45,7 @@ return (
                      }`}  
              >
                 <Image
-                src={pict.src}
+                src={pict.src as string || "./assets/images/3.webp"}
                 alt=""
                 width={400}
                 height={400}

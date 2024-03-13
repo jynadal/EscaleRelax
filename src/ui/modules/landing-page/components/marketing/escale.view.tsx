@@ -17,13 +17,13 @@ export const EscaleView = () =>{
             </Typography>
             <a href="/escale-boutique" target="_blank">
                 <div className="relative bg-gray-400 rounded h-[626px]">
-                    <div className="relative z-10 flex flex-col item-center justify-center gap-2 h-full text-white rounded opacity-0 bg-gray hover:opacity-95 animate">
-                        <Typography variant="caption2" theme="white" component="p" className="uppercase" weight="medium">
-                        Les Produits
+                    <div className="relative z-10 flex flex-col item-center justify-center gap-2 h-full text-white rounded opacity-0 bg-jadea hover:opacity-95 animate">
+                        <Typography variant="h2" theme="gray" component="p" weight="regular">
+                        Les Produits <br/><br/> <br/> Jadéa
                         </Typography>
                     </div>
                     <Image fill 
-                        src="/assets/images/About.jpg"
+                        src="/assets/images/jadea.jpg"
                         alt=""
                         className="object-cover object-center rounded" 
                     />

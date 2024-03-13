@@ -1,7 +1,7 @@
-import { Logo } from "@/ui/design-system/logo/logo"
+//import { Logo } from "@/ui/design-system/logo/logo"
 import { Container } from "../container/container"
 import { Typography } from "@/ui/design-system/typography/typography"
-import { Button } from "@/ui/design-system/button/button"
+//import { Button } from "@/ui/design-system/button/button"
 import Link from "next/link"
 import { ActiveLink } from "./active-link"
 import { useState } from 'react';
@@ -95,10 +95,7 @@ export const Navigation = ({}: Props) => {
                             <ActiveLink href="/services">Services</ActiveLink>
                             {/* <ActiveLink href="shop">Boutique</ActiveLink>                         */}
                         </Typography>
-                        {/* <div className="flex items-center gap-2">
-                            <Button baseUrl="/connexion" size="small">Connexion</Button>
-                            <Button baseUrl="/connexion/inscription" size="small" variant="secondary">Prendre RDV</Button>
-                        </div> */}
+                    
                     </div>
                 </div>
             </Container>

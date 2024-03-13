@@ -1,0 +1,48 @@
+[debug] [2024-03-06T15:39:28.072Z] ----------------------------------------------------------------------
+[debug] [2024-03-06T15:39:28.077Z] Command:       /usr/local/bin/firebase /home/jean/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2024-03-06T15:39:28.078Z] CLI Version:   11.30.0
+[debug] [2024-03-06T15:39:28.078Z] Platform:      linux
+[debug] [2024-03-06T15:39:28.078Z] Node Version:  v16.16.0
+[debug] [2024-03-06T15:39:28.079Z] Time:          Wed Mar 06 2024 16:39:28 GMT+0100 (GMT+01:00)
+[debug] [2024-03-06T15:39:28.080Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-06T15:39:28.281Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-06T15:39:28.283Z] > authorizing via signed-in user (nadaljeanyves79@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/jean/Documents/Monwebdev/EscaleRelax/EscaleR/front-end
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-03-06T15:39:35.948Z] Using project from CLI flag: erelax-1e3e1
+[debug] [2024-03-06T15:39:35.951Z] > refreshing access token with scopes: []
+[debug] [2024-03-06T15:39:35.955Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-03-06T15:39:35.956Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-03-06T15:39:36.071Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-03-06T15:39:36.071Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-03-06T15:39:36.073Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/erelax-1e3e1 [none]
+[debug] [2024-03-06T15:39:36.121Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/erelax-1e3e1 401
+[debug] [2024-03-06T15:39:36.122Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/erelax-1e3e1 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-03-06T15:39:36.123Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-03-06T15:39:36.213Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/home/jean/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/jean/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project erelax-1e3e1. Please make sure the project exists and your account has permission to access it.

@@ -14,7 +14,7 @@ interface cardListInterface {
     time?:number,
     price?:number,
     link?:string,
-}
+}[]
 
 const datacards: cardListInterface[] = [
     {
@@ -75,10 +75,10 @@ export const DetailService = ({}) => {
             <div className="flex items-center gap-4">
             
              <div>
-              <Image src={card.image}
+              <Image src={card.image as string || "/assets/images/6.webp"}
                width={300}
                height={216}
-               alt={card.service}
+               alt={card.service as string}
                 />
             
               <div className="flex flex-col item-center text-center gap-0.5 text-goldBg-300">
@@ -87,9 +87,9 @@ export const DetailService = ({}) => {
               variant="h5"
               weight="medium"
               theme="gray"
-               className="mt-5">{card.service}</Typography>
+               className="mt-5">{card.service as string }</Typography>
 
-            <Typography
+            {/* <Typography
               component= "p"
               variant="caption1"
               weight="medium"
@@ -102,17 +102,17 @@ export const DetailService = ({}) => {
               weight="regular"
               theme="gray"
               className="mt-5"
-              >{card.price} €</Typography>
+              >{card.price} €</Typography> */}
 
               <div className="mt-6 align-bottom"> 
                 <Button 
                 
                 size="small"
                 variant="secondary"
-                baseUrl={card.link}
+                baseUrl={card.link as string }
                 type="submit"
                 
-                >Réserver</Button>
+                >En savoir + </Button>
                 </div>
               </div>
            
@@ -138,7 +138,7 @@ return (
                         variant="h2"
                         component="h1" 
                         className="max-w-xl text-gray-700 text-center my-10 mx-auto">
-                        Nos épilations à domicile
+                        Nos épilations à domicile rcytvuyifuytdyufviyvciubiohlikyxcfyjhguigiubuyhf
             </Typography>
                 <Typography 
                         variant="body-lg"

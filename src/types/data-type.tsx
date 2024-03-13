@@ -58,4 +58,4 @@ export interface servicesInterface {
     src?:string,
     title?:string,
     desc?:string,
-}
+}[];

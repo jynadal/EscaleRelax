@@ -79,13 +79,13 @@ const Description = ({activeImage, clickNext, clickPrev}: Props) => {
                     <div
                     className="absolute bottom-2 right-10 cursor-pointer"
                     onClick={clickPrev}>
-                    <Image src={left} alt="" width={30} height={30} />
+                    <Image src={left as string } alt="" width={30} height={30} />
                     </div>
 
                     <div
                     className="absolute bottom-2 right-2 cursor-pointer"
                     onClick={clickNext}>
-                    <Image src={right} alt="" width={30} height={30} className=""/>
+                    <Image src={right as string } alt="" width={30} height={30} className=""/>
                     </div>
                 </div>
 

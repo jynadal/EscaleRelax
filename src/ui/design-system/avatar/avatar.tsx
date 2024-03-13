@@ -28,7 +28,7 @@ export const Avatar = ({size = "medium", src ="/assets/images/profilWomen.jpg", 
         <div className={clsx(sizeStyles, "relative bg-gray-400 rounded")}>
             <Image 
                 fill
-                src={src}
+                src={src as string}
                 alt={alt}
                 className="object-cover object-center rounded"
             />

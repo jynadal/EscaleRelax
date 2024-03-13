@@ -12,7 +12,7 @@ interface cardListInterface {
     time?:number,
     price?:number,
     link?:string,
-}
+}[]
 
 const datacards: cardListInterface[] = [
     {
@@ -36,28 +36,7 @@ const datacards: cardListInterface[] = [
         service:"Modelage Corps",
         link:"/contact"
     },
-    //     {
-    //    image:"/assets/images/4.webp",
-    //     time: 45,
-    //     price:75,
-    //     service:"Eskalia",
-    //     link:"/services/eskalia"
-    // },
-    //  {
-    //    image:"/assets/images/5.webp",
-    //     time: 45,
-    //     price:80,
-    //     service:"Soins du Corps",
-    //     link:"/services/soins_corps"
-    // },
-    //  {
-    //    image:"/assets/images/6.webp",
-    //     time: 45,
-    //     price:75,
-    //     service:"Beauté des mains et des pieds",
-    //     link:"/services/beaute_mains_pieds"
-    // },
-    
+   
 ]
 
 export const ServicesCards = ({}) => {
@@ -67,10 +46,10 @@ export const ServicesCards = ({}) => {
             <div className="flex items-center gap-4">
             
              <div>
-              <Image src={card.image}
+              <Image src={card.image as string || "/assets/images/3.webp"}
                width={300}
                height={216}
-               alt={card.service}
+               alt={card.service || 'photo'}
                 />
             
               <div className="flex flex-col item-center text-center gap-0.5 text-goldBg-300">
