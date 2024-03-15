@@ -7,10 +7,10 @@ export const EscaleView = () =>{
     <div className="bg-gray-300">
         <Container className="py-24 text-center">
             <Typography variant="h2" component="h2" className="mb-2.5">
-            Escale du jour est L'Ile Maurice
+            Escale du jour est L&apos;Ile Maurice
             </Typography>
             <Typography variant="lead" component="h3" className="mb-5">
-            Escale du jour est L'Ile Maurice
+            Escale du jour est L&apos;Ile Maurice
             </Typography>
             <Typography variant="caption3" theme="gray" component="p" className="mb-16">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eius.
