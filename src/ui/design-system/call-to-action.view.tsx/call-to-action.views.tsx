@@ -13,7 +13,7 @@ return (
         <div className="relative z-10 max-w-3xl space-y-5">
             <Typography
                 variant="h3" theme="white" component="h2">
-                N'attendez pas pour prendre rendez-vous!            
+                N&apos;attendez pas pour prendre rendez-vous!            
             </Typography>
             <div>
             <Button variant="accent" 
